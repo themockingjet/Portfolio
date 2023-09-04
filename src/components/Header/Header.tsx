@@ -35,7 +35,7 @@ export function Header(props: HeaderProps) {
 
 	return (
 		<>
-			<header className={cn("min-h-24 h-24 w-full px-6 fixed top-0 bg-white", props.className)}>
+			<header className={cn("min-h-24 h-24 w-full px-6 fixed top-0 ", props.className)}>
 				<div className="flex h-full w-full items-center justify-between">
 					<DarkmodeToggle />
 					<AnimatePresence>{isModalOpen && <HeaderModal />}</AnimatePresence>

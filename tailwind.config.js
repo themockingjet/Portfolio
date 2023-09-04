@@ -1,4 +1,7 @@
 /** @type {import('tailwindcss').Config} */
+
+const plugin = require("tailwindcss/plugin");
+
 export default {
 	content: ["./index.html", "./src/**/*.{ts,tsx}"],
 	theme: {
@@ -7,6 +10,13 @@ export default {
 			"roboto-mono": ["Roboto", "monospace"],
 		},
 		extend: {
+			colors: {
+				"wild-blue": "#96B6C5",
+				"dark-blue": "#001C30",
+				"light-blue": "#E9F8F9",
+				"medium-blue": "#537FE7",
+				moonstone: "#E9F8F9",
+			},
 			keyframes: {
 				spin: {
 					"0%": { transform: "rotate(0deg)" },
@@ -34,6 +44,14 @@ export default {
 			},
 		},
 	},
-	plugins: [],
+	plugins: [
+		plugin(function ({ addBase, theme }) {
+			addBase({
+				h1: { fontSize: theme("fontSize.2xl") },
+				h2: { fontSize: theme("fontSize.xl") },
+				h3: { fontSize: theme("fontSize.lg") },
+			});
+		}),
+	],
 	darkMode: "class",
 };

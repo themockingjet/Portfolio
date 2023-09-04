@@ -1,8 +1,17 @@
+/*  */
+/*  */
+/*  */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;700;900&family=Roboto+Mono:wght@100;300;400;500;600;700&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+	.code-language {
+		@apply rounded-full bg-black text-white px-2 m-0.5;
+	}
+}
 
 /* width */
 ::-webkit-scrollbar {

@@ -21,7 +21,6 @@
 		"noFallthroughCasesInSwitch": true,
 		"baseUrl": ".", // Required for path aliases
 		"paths": {
-			"@root/*": ["./*"],
 			"@components": ["./src/components"],
 			"@components/*": ["./src/components/*"],
 			"@hooks": ["./src/hooks"],
@@ -29,7 +28,8 @@
 			"@pages": ["./src/pages"],
 			"@pages/*": ["./src/pages/*"],
 			"@utils": ["./src/utils"],
-			"@utils/*": ["./src/utils/*"]
+			"@utils/*": ["./src/utils/*"],
+			"@root/*": ["./*"]
 		}
 	},
 	"include": ["src"],

@@ -7,7 +7,6 @@ export default defineConfig({
 	plugins: [react()],
 	resolve: {
 		alias: {
-			"@root": path.join(__dirname, ""),
 			"@components": path.join(__dirname, "./src/components/"),
 			"@components/*": path.join(__dirname, "./src/components/*"),
 			"@hooks": path.join(__dirname, "./src/hooks/"),
@@ -16,6 +15,7 @@ export default defineConfig({
 			"@pages/*": path.join(__dirname, "./src/pages/*"),
 			"@utils": path.join(__dirname, "./src/utils/"),
 			"@utils/*": path.join(__dirname, "./src/utils/*"),
+			"@root": path.join(__dirname, ""),
 		},
 	},
 });
