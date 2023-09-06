@@ -5,5 +5,6 @@
 import { HTMLMotionProps } from "framer-motion";
 
 export type MotionListRevealProps = {
-	children?: React.ReactNode;
+    coverClassName?: string;
+    children?: React.ReactNode;
 } & HTMLMotionProps<"li">;

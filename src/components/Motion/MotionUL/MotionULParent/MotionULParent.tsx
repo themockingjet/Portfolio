@@ -3,25 +3,25 @@
 //
 
 import { motion } from "framer-motion";
-import { MotionListRevealProps } from "./MotionListReveal.types";
+import { MotionULParentProps } from "./MotionULParent.types";
 import { cn } from "@utils";
 
-export function MotionListReveal(props: MotionListRevealProps) {
+export function MotionULParent(props: MotionULParentProps) {
     return (
         <div className={cn("relative overflow-hidden", props.className)}>
-            <motion.li
-                className="overflow-hidden"
+            <motion.ul
+                className={"dark:marker:text-orange list-inside list-disc overflow-hidden"}
                 variants={{
                     hidden: { opacity: 0, y: "100%" },
                     visible: { opacity: 1, y: 0 },
                 }}
                 initial="hidden"
                 whileInView={"visible"}
-                transition={{ duration: 0.5 }}
+                transition={{ duration: 0.5, delay: 0.3, staggerChildren: 0.1, delayChildren: 0.1 }}
                 {...props}
             >
                 {props.children}
-            </motion.li>
+            </motion.ul>
             <motion.div
                 viewport={{ margin: "-20% 0% -20% 0%" }}
                 variants={{

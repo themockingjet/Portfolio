@@ -8,42 +8,45 @@
 @tailwind utilities;
 
 @layer components {
-	.code-language {
-		@apply rounded-full px-1 m-0.5 text-dark-blue;
-	}
+    .code-language {
+        @apply m-0.5 rounded-full px-1 text-dark-blue;
+    }
+    .card {
+        @apply dark:bg-indigo bg-sky-blue rounded-md p-6 shadow-md dark:shadow-pale-blue/50;
+    }
 }
 
 /* width */
 ::-webkit-scrollbar {
-	background-color: transparent;
-	width: 10px;
+    background-color: transparent;
+    width: 10px;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-	background: #474747;
-	border-radius: 5px;
-	height: 5px;
+    background: #474747;
+    border-radius: 5px;
+    height: 5px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-	background: #474747;
+    background: #474747;
 }
 
 .scroll-hide::-webkit-scrollbar-thumb {
-	position: absolute;
-	background-color: white;
+    position: absolute;
+    background-color: white;
 }
 
 html,
 body,
 #root {
-	font-family: "Inter", sans-serif;
-	height: 100%;
-	width: 100%;
-	margin: 0;
-	padding: 0;
-	/* Prevents overflow on the x-axis */
-	overflow-x: hidden;
+    font-family: "Inter", sans-serif;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    /* Prevents overflow on the x-axis */
+    overflow-x: hidden;
 }

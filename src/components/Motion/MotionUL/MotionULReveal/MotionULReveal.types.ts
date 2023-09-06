@@ -5,6 +5,7 @@
 import { HTMLMotionProps } from "framer-motion";
 
 export type MotionULRevealProps = {
-	className?: string;
-	children?: React.ReactNode;
+    coverClassName?: string;
+    className?: string;
+    children?: React.ReactNode;
 } & HTMLMotionProps<"ul">;

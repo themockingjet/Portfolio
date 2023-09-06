@@ -11,11 +11,16 @@ export default {
 		},
 		extend: {
 			colors: {
+				sunset: "#F15A59",
+				water: "#C9EEFF",
+				indigo: "#27374D",
+				"sky-blue": "#C0EEF2",
 				"dark-blue": "#001C30",
 				"light-blue": "#E6FFFD",
 				"medium-blue": "#537FE7",
 				"pale-blue": "#B9F3E4",
 				crystal: "#A6D0DD",
+				orange: "#FF8400",
 				"code-yellow": "#FFE17B",
 				"code-blue": "#337CCF",
 				"code-orange": "#FF6464",
