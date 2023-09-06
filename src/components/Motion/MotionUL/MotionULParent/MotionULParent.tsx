@@ -2,14 +2,16 @@
 //
 //
 
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
+
 import { MotionULParentProps } from "./MotionULParent.types";
+
 import { cn } from "@utils";
 
 export function MotionULParent(props: MotionULParentProps) {
     return (
         <div className={cn("relative overflow-hidden", props.className)}>
-            <motion.ul
+            <m.ul
                 className={"dark:marker:text-orange list-inside list-disc overflow-hidden"}
                 variants={{
                     hidden: { opacity: 0, y: "100%" },
@@ -21,8 +23,8 @@ export function MotionULParent(props: MotionULParentProps) {
                 {...props}
             >
                 {props.children}
-            </motion.ul>
-            <motion.div
+            </m.ul>
+            <m.div
                 viewport={{ margin: "-20% 0% -20% 0%" }}
                 variants={{
                     hidden: { left: 0 },

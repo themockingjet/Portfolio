@@ -13,70 +13,70 @@ import { HeaderModal } from "./HeaderModal";
 import { HeaderProps } from "./Header.types";
 
 export function Header(props: HeaderProps) {
-	//
-	const { yPosition, isScrollTop } = props;
-	const [isModalOpen, setIsModalOpen] = useState(false);
+    //
+    const { yPosition, isScrollTop } = props;
+    const [isModalOpen, setIsModalOpen] = useState(false);
 
-	// disable scrolling when modal is open using useffect
-	useEffect(() => {
-		const main_container = document.getElementById("main-container");
+    // disable scrolling when modal is open using useffect
+    useEffect(() => {
+        const main_container = document.getElementById("main-container");
 
-		main_container &&
-			main_container.addEventListener("scroll", (e) => {
-				// prevent going back to top
-				e.preventDefault();
-			});
+        main_container &&
+            main_container.addEventListener("scroll", (e) => {
+                // prevent going back to top
+                e.preventDefault();
+            });
 
-		return () => {
-			main_container &&
-				main_container.removeEventListener("scroll", (e) => {
-					// prevent going back to top
-					e.preventDefault();
-				});
-		};
-	}, [isModalOpen]);
+        return () => {
+            main_container &&
+                main_container.removeEventListener("scroll", (e) => {
+                    // prevent going back to top
+                    e.preventDefault();
+                });
+        };
+    }, [isModalOpen]);
 
-	return (
-		<AnimatePresence>
-			{yPosition !== undefined && yPosition < 100 ? (
-				<motion.div
-					className={cn(
-						"bg-light-blue dark:bg-dark-blue px-6 min-h-24 h-24 w-full fixed top-0 z-50",
-						props.className
-					)}
-					initial={{ height: "0rem" }}
-					animate={{ height: "6rem" }}
-					exit={{ height: "0rem" }}
-					transition={{ duration: 0.18, ease: "easeInOut", when: "beforeChildren", staggerChildren: 0.1 }}
-				>
-					<div className="flex h-full w-full items-center justify-between z-10">
-						<DarkmodeToggle />
-						<HeaderNavbar onClick={() => setIsModalOpen(!isModalOpen)} />
-						{isModalOpen && <HeaderModal />}
-					</div>
-				</motion.div>
-			) : (
-				isScrollTop && (
-					<motion.div
-						className={cn(
-							"bg-light-blue dark:bg-dark-blue px-6 min-h-20 h-20 w-full fixed top-0 z-50 drop-shadow-lg",
-							props.className
-						)}
-						initial={{ height: "0rem" }}
-						animate={{ height: "5rem" }}
-						exit={{ height: "0rem" }}
-						transition={{ duration: 0.18, ease: "easeInOut", when: "beforeChildren", staggerChildren: 0.1 }}
-					>
-						<div className="flex h-full w-full items-center justify-between z-10">
-							<DarkmodeToggle />
-							<HeaderNavbar onClick={() => setIsModalOpen(!isModalOpen)} />
-							{isModalOpen && <HeaderModal />}
-						</div>
-					</motion.div>
-				)
-			)}
-		</AnimatePresence>
-	);
+    return (
+        <AnimatePresence>
+            {yPosition !== undefined && yPosition < 100 ? (
+                <motion.div
+                    className={cn(
+                        "min-h-24 w-ful fixed inset-x-0 top-0 z-50 h-24 bg-light-blue px-6 xl:container dark:bg-dark-blue md:px-12 lg:px-28 xl:mx-auto",
+                        props.className,
+                    )}
+                    initial={{ height: "0rem" }}
+                    animate={{ height: "6rem" }}
+                    exit={{ height: "0rem" }}
+                    transition={{ duration: 0.18, ease: "easeInOut", when: "beforeChildren", staggerChildren: 0.1 }}
+                >
+                    <div className="z-10 flex h-full w-full items-center justify-between">
+                        <DarkmodeToggle />
+                        <HeaderNavbar onClick={() => setIsModalOpen(!isModalOpen)} />
+                        {isModalOpen && <HeaderModal />}
+                    </div>
+                </motion.div>
+            ) : (
+                isScrollTop && (
+                    <motion.div
+                        className={cn(
+                            "min-h-20 fixed top-0 z-50 h-20 w-full bg-light-blue px-6 drop-shadow-lg dark:bg-dark-blue",
+                            props.className,
+                        )}
+                        initial={{ height: "0rem" }}
+                        animate={{ height: "5rem" }}
+                        exit={{ height: "0rem" }}
+                        transition={{ duration: 0.18, ease: "easeInOut", when: "beforeChildren", staggerChildren: 0.1 }}
+                    >
+                        <div className="z-10 flex h-full w-full items-center justify-between px-6 xl:container md:px-12 lg:px-28 xl:mx-auto">
+                            <DarkmodeToggle />
+                            <HeaderNavbar onClick={() => setIsModalOpen(!isModalOpen)} />
+                            {isModalOpen && <HeaderModal />}
+                        </div>
+                    </motion.div>
+                )
+            )}
+        </AnimatePresence>
+    );
 }
 
 // <AnimatePresence>

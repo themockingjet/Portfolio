@@ -3,10 +3,12 @@
 //
 
 import { Children } from "react";
-import { motion } from "framer-motion";
-import { MotionULRevealProps } from "./MotionULReveal.types";
-import { cn } from "@utils";
+import { m } from "framer-motion";
+
 import { MotionListReveal } from "@components/Motion/MotionList/MotionListReveal";
+import { MotionULRevealProps } from "./MotionULReveal.types";
+
+import { cn } from "@utils";
 
 export function MotionULReveal(props: MotionULRevealProps) {
     //
@@ -14,7 +16,7 @@ export function MotionULReveal(props: MotionULRevealProps) {
 
     return (
         <div className={cn("relative overflow-hidden", props.className)}>
-            <motion.ul
+            <m.ul
                 className={"dark:marker:text-orange list-inside list-disc overflow-hidden"}
                 variants={{
                     hidden: { opacity: 0, y: "100%" },
@@ -32,8 +34,8 @@ export function MotionULReveal(props: MotionULRevealProps) {
                         </MotionListReveal>
                     );
                 })}
-            </motion.ul>
-            <motion.div
+            </m.ul>
+            <m.div
                 viewport={{ margin: "-20% 0% -20% 0%" }}
                 variants={{
                     hidden: { left: 0 },

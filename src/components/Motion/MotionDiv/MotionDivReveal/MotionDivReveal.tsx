@@ -2,14 +2,14 @@
 //
 //
 
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { MotionDivRevealProps } from "./MotionDivReveal.types";
 import { cn } from "@utils";
 
 export function MotionDivReveal(props: MotionDivRevealProps) {
     return (
         <div className="relative flex overflow-hidden">
-            <motion.div
+            <m.div
                 className="overflow-hidden"
                 variants={{
                     hidden: { opacity: 0, y: "100%" },
@@ -21,8 +21,8 @@ export function MotionDivReveal(props: MotionDivRevealProps) {
                 {...props}
             >
                 {props.children}
-            </motion.div>
-            <motion.div
+            </m.div>
+            <m.div
                 viewport={{ margin: "-20% 0% -20% 0%" }}
                 variants={{
                     hidden: { left: 0 },

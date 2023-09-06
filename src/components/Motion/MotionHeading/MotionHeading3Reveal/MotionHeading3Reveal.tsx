@@ -3,14 +3,14 @@
 //
 
 import { cn } from "@utils";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 
 import { MotionHeading3RevealProps } from "./MotionHeading3Reveal.types";
 
 export function MotionHeading3Reveal(props: MotionHeading3RevealProps) {
     return (
         <div className={cn("relative flex overflow-hidden font-bold tracking-tighter dark:text-pale-blue", props.className)}>
-            <motion.h3
+            <m.h3
                 className={"overflow-hidden"}
                 variants={{
                     hidden: { opacity: 0, y: "100%" },
@@ -22,8 +22,8 @@ export function MotionHeading3Reveal(props: MotionHeading3RevealProps) {
                 {...props}
             >
                 {props.children}
-            </motion.h3>
-            <motion.div
+            </m.h3>
+            <m.div
                 viewport={{ margin: "-20% 0% -20% 0%" }}
                 variants={{
                     hidden: { left: 0 },

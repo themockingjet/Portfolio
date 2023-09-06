@@ -23,7 +23,7 @@ export function HeaderNavbar(props: any) {
 
                 {/* <!-- Mobile Menu open: "block", Menu closed: "hidden" --> */}
                 <div className="hidden lg:inline-flex">
-                    <div className="flex flex-col md:mx-6 md:flex-row">
+                    <div className="flex flex-col md:flex-row lg:space-x-10 xl:space-x-20">
                         <a
                             className="my-1 text-sm font-medium hover:text-indigo-500 dark:text-gray-200 dark:hover:text-indigo-400 md:mx-4 md:my-0 lg:text-base"
                             href="#about"

@@ -2,14 +2,16 @@
 //
 //
 
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
+
 import { MotionListRevealProps } from "./MotionListReveal.types";
+
 import { cn } from "@utils";
 
 export function MotionListReveal(props: MotionListRevealProps) {
     return (
         <div className={cn("relative overflow-hidden", props.className)}>
-            <motion.li
+            <m.li
                 className="overflow-hidden"
                 variants={{
                     hidden: { opacity: 0, y: "100%" },
@@ -21,8 +23,8 @@ export function MotionListReveal(props: MotionListRevealProps) {
                 {...props}
             >
                 {props.children}
-            </motion.li>
-            <motion.div
+            </m.li>
+            <m.div
                 viewport={{ margin: "-20% 0% -20% 0%" }}
                 variants={{
                     hidden: { left: 0 },
