@@ -21,7 +21,6 @@ export function ButtonHamburger(props: ButtonHamburgerProps) {
                 strokeWidth=".6"
                 fill="rgba(0,0,0,0)"
                 strokeLinecap="round"
-                onAnimationEnd={(e) => {}}
             >
                 <path d="M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7">
                     <animate

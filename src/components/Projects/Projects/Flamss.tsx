@@ -10,7 +10,7 @@ import { MotionULParent } from "@components/Motion/MotionUL/MotionULParent";
 export function Flamss() {
     return (
         <MotionDivReveal className="p-6">
-            <div className="card flex-col space-y-4 text-sm">
+            <div className="card flex-col space-y-4 text-sm md:text-base">
                 <MotionHeading3Reveal className="font-bold" coverClassName="dark:bg-indigo bg-sky-blue">
                     Faculty Load Monitoring And Scheduling System for IT Department |
                     <a

@@ -2,7 +2,7 @@
 //
 //
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 import { Scrollbar } from "@components/Scrollbar";
 import { Header } from "@components/Header";
@@ -16,28 +16,6 @@ const App = () => {
     //
     const [yPosition, setYPosition] = useState(0);
     const [isScrollTop, setIsScrollTop] = useState(false);
-    const [animate, setAnimate] = useState(false);
-
-    useEffect(() => {
-        setAnimate(true);
-
-        const timeAnimate = setTimeout(() => {
-            setAnimate(false);
-        }, 1500);
-
-        return () => {
-            clearTimeout(timeAnimate);
-        };
-    }, []);
-
-    // if (animate) {
-    // 	return (
-    // 		//
-    // 		<div className="flex flex-col justify-center items-center h-screen">
-    // 			<div className="animate-bounce text-5xl font-bold">Loading...</div>
-    // 		</div>
-    // 	);
-    // }
 
     return (
         <Scrollbar

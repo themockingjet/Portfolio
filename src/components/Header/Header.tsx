@@ -41,7 +41,7 @@ export function Header(props: HeaderProps) {
             {yPosition !== undefined && yPosition < 100 ? (
                 <motion.div
                     className={cn(
-                        "min-h-24 w-ful fixed inset-x-0 top-0 z-50 h-24 bg-light-blue px-6 xl:container dark:bg-dark-blue md:px-12 lg:px-28 xl:mx-auto",
+                        "min-h-24 fixed inset-x-0 top-0 z-10 h-24 w-full bg-light-blue px-6 xl:container dark:bg-dark-blue md:px-12 lg:px-28 xl:mx-auto",
                         props.className,
                     )}
                     initial={{ height: "0rem" }}
@@ -49,7 +49,7 @@ export function Header(props: HeaderProps) {
                     exit={{ height: "0rem" }}
                     transition={{ duration: 0.18, ease: "easeInOut", when: "beforeChildren", staggerChildren: 0.1 }}
                 >
-                    <div className="z-10 flex h-full w-full items-center justify-between">
+                    <div className="z-10 flex h-full w-full items-center justify-between md:px-12 lg:px-28 xl:mx-auto">
                         <DarkmodeToggle />
                         <HeaderNavbar onClick={() => setIsModalOpen(!isModalOpen)} />
                         {isModalOpen && <HeaderModal />}
@@ -59,7 +59,7 @@ export function Header(props: HeaderProps) {
                 isScrollTop && (
                     <motion.div
                         className={cn(
-                            "min-h-20 fixed top-0 z-50 h-20 w-full bg-light-blue px-6 drop-shadow-lg dark:bg-dark-blue",
+                            "min-h-20 fixed top-0 z-20 h-20 w-full bg-light-blue px-6 drop-shadow-lg dark:bg-dark-blue",
                             props.className,
                         )}
                         initial={{ height: "0rem" }}
@@ -67,7 +67,7 @@ export function Header(props: HeaderProps) {
                         exit={{ height: "0rem" }}
                         transition={{ duration: 0.18, ease: "easeInOut", when: "beforeChildren", staggerChildren: 0.1 }}
                     >
-                        <div className="z-10 flex h-full w-full items-center justify-between px-6 xl:container md:px-12 lg:px-28 xl:mx-auto">
+                        <div className=" flex h-full w-full items-center justify-between px-6 xl:container md:px-12 lg:px-28 xl:mx-auto">
                             <DarkmodeToggle />
                             <HeaderNavbar onClick={() => setIsModalOpen(!isModalOpen)} />
                             {isModalOpen && <HeaderModal />}

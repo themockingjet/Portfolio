@@ -10,7 +10,7 @@ import { MotionULParent } from "@components/Motion/MotionUL/MotionULParent";
 export function CryptoConverter() {
     return (
         <MotionDivReveal className="p-6">
-            <div className="card h-full flex-col space-y-4 text-sm">
+            <div className="card h-full flex-col space-y-4 text-sm md:text-base">
                 <MotionHeading3Reveal className="font-bold" coverClassName="bg-sky-blue dark:bg-indigo">
                     Discord Bot: Cryptocurrency Price Ticker |
                     <a

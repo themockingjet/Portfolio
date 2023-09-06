@@ -8,7 +8,7 @@ export function HeaderNavbar(props: any) {
     //
 
     return (
-        <div className="relative z-10">
+        <div className="relative z-50">
             <div className="mx-auto md:flex md:items-center md:justify-between">
                 <div className="flex items-center justify-between">
                     {/* <!-- Mobile menu button --> */}
