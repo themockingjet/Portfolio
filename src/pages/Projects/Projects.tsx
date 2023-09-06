@@ -2,12 +2,27 @@
 //
 //
 
+import { MotionHeading } from "@components/Motion/MotionHeading";
+import { MotionDiv } from "@components/Motion/MotionDiv";
+import { MotionText } from "@components/Motion/MotionText";
+import { MotionUL } from "@components/Motion/MotionUL";
+import { MotionList } from "@components/Motion/MotionList";
+
 export function Projects() {
 	return (
-		<section className="flex flex-col h-auto px-6 mb-6">
+		<section className="flex flex-col h-auto px-6 mb-6 overflow-hidden">
 			<div className="flex space-x-4">
-				<p className="font-semibold tracking-tighter text-2xl py-6">Projects</p>
-				<hr className="flex-1 h-1 bg-black self-center"></hr>
+				<MotionHeading whileInView={"fade-in"} initial="hidden" transition={{ duration: 1 }}>
+					Projects
+				</MotionHeading>
+				<MotionDiv
+					whileInView={"sl-in"}
+					initial="hidden-left"
+					transition={{ duration: 0.3 }}
+					className="flex-1 h-1 bg-dark-blue self-center"
+				>
+					<div></div>
+				</MotionDiv>
 			</div>
 			<div className="flex flex-col space-y-6">
 				<div className="flex-col space-y-4 text-sm">

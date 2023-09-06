@@ -7,15 +7,14 @@ import { ScrollbarProps } from "./Scrollbar.types";
 export function Scrollbar(props: ScrollbarProps) {
 	return (
 		<Scrollbars
+			className="overflow-y-auto overflow-x-hidden"
 			onScroll={props.handleScroll}
-			onScrollFrame={props.handleScrollFrame}
+			onScrollFrame={props.onScrollFrame}
 			onScrollStart={props.handleScrollStart}
 			onScrollStop={props.handleScrollStop}
 			onUpdate={props.handleUpdate}
-			renderView={props.renderView}
-			renderTrackHorizontal={props.renderTrackHorizontal}
+			renderView={(props) => <div {...props} style={{ ...props.style, overflowX: "hidden" }} />}
 			renderTrackVertical={props.renderTrackVertical}
-			renderThumbHorizontal={props.renderThumbHorizontal}
 			renderThumbVertical={props.renderThumbVertical}
 			autoHide={props.autoHide || true}
 			autoHideTimeout={props.autoHideTimeout || 400}

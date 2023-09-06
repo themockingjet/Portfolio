@@ -13,7 +13,7 @@ export default {
 			colors: {
 				"wild-blue": "#96B6C5",
 				"dark-blue": "#001C30",
-				"light-blue": "#E9F8F9",
+				"light-blue": "#E6FFFD",
 				"medium-blue": "#537FE7",
 				moonstone: "#E9F8F9",
 			},

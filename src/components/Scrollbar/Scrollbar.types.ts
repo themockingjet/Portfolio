@@ -2,9 +2,11 @@
 //
 //
 
+import * as React from "react";
+
 export type ScrollbarProps = {
 	handleScroll?: (event: React.UIEvent<HTMLDivElement, UIEvent>) => void;
-	handleScrollFrame?: (values: any) => void;
+	onScrollFrame?: (values: any) => void;
 	handleScrollStart?: () => void;
 	handleScrollStop?: () => void;
 	handleUpdate?: (values: any) => void;
@@ -23,4 +25,5 @@ export type ScrollbarProps = {
 	universal?: boolean;
 	children?: React.ReactNode;
 	className?: string;
+	style?: React.CSSProperties;
 };
