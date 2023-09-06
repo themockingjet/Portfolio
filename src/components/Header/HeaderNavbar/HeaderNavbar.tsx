@@ -12,9 +12,8 @@ export function HeaderNavbar(props: any) {
 			<div className="mx-auto md:flex md:justify-between md:items-center">
 				<div className="flex items-center justify-between">
 					{/* <!-- Mobile menu button --> */}
-					<div className="flex md:hidden">
+					<div className="flex lg:hidden">
 						<ButtonHamburger
-							className=""
 							onClick={() => {
 								props.onClick();
 							}}

@@ -18,49 +18,19 @@ export const child_variants = {
 	"fade-out": {
 		opacity: 0,
 	},
-	"sl-fade-in": {
+	"bounce-in": {
 		opacity: 1,
-		x: 0,
+		scale: 1,
+		transition: {
+			ease: [0, 0.71, 0.2, 1.01],
+			scale: {
+				type: "spring",
+				damping: 5,
+			},
+		},
 	},
-	"sl-fade-out": {
+	"bounce-out": {
 		opacity: 0,
-		x: -100,
-	},
-	"sr-fade-in": {
-		opacity: 1,
-		x: 0,
-	},
-	"sr-fade-out": {
-		opacity: 0,
-		x: 100,
-	},
-
-	"sl-in": {
-		x: 0,
-	},
-	"sl-out": {
-		x: -100,
-	},
-	"sr-in": {
-		x: 0,
-	},
-	"sr-out": {
-		x: 100,
-	},
-	"su-in": {
-		y: 0,
-		opacity: 1,
-		duration: 0.2,
-	},
-	"su-out": {
-		y: 100,
-		opacity: 0,
-		duration: 0.2,
-	},
-	"sd-in": {
-		y: 0,
-	},
-	"sd-out": {
-		y: -100,
+		scale: 0.5,
 	},
 };

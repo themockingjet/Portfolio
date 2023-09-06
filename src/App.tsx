@@ -2,17 +2,15 @@
 //
 //
 
-import { useEffect, useRef, useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { useEffect, useState } from "react";
 
 import { Scrollbar } from "@components/Scrollbar";
 import { Header } from "@components/Header";
-import { Introduction } from "@pages/Introduction";
-import { About } from "@pages/About";
-import { Experience } from "@pages/Experience";
-import { Projects } from "@pages/Projects";
+import { Introduction } from "@components/Introduction";
+import { About } from "@components/About";
+import { Experience } from "@components/Experience";
+import { Projects } from "@components/Projects";
 import { Footer } from "@components/Footer";
-import { HeaderModal } from "@components/Header/HeaderModal";
 
 const App = () => {
 	//
@@ -43,7 +41,7 @@ const App = () => {
 
 	return (
 		<Scrollbar
-			className="min-h-screen h-screen overflow-hidden bg-light-blue dark:bg-dark-blue text-dark-blue  dark:text-medium-blue"
+			className="min-h-screen h-screen overflow-hidden bg-light-blue dark:bg-dark-blue text-dark-blue dark:text-crystal"
 			renderThumbVertical={(props) => (
 				<div {...props} className="bg-dark-blue dark:bg-light-blue text-dark-blue rounded-full w-full" />
 			)}

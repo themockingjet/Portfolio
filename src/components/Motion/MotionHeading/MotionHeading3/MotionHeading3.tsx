@@ -15,7 +15,9 @@ export function MotionHeading3(props: MotionHeading3Props) {
 		<motion.h3
 			className={cn("font-bold tracking-tighter", props.className)}
 			variants={child_variants}
-			viewport={{ once: false }}
+			viewport={{ once: false, amount: "all", margin: "-100px 0px -100px 0px" }}
+			initial="hidden"
+			whileInView={"fade-in"}
 			{...props}
 		>
 			{props.children}

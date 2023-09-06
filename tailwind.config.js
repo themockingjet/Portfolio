@@ -11,11 +11,17 @@ export default {
 		},
 		extend: {
 			colors: {
-				"wild-blue": "#96B6C5",
 				"dark-blue": "#001C30",
 				"light-blue": "#E6FFFD",
 				"medium-blue": "#537FE7",
-				moonstone: "#E9F8F9",
+				"pale-blue": "#B9F3E4",
+				crystal: "#A6D0DD",
+				"code-yellow": "#FFE17B",
+				"code-blue": "#337CCF",
+				"code-orange": "#FF6464",
+				"code-purple": "#793FDF",
+				"code-green": "#7ECF4A",
+				"code-pink": "#E791AE",
 			},
 			keyframes: {
 				spin: {

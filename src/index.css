@@ -9,7 +9,7 @@
 
 @layer components {
 	.code-language {
-		@apply rounded-full bg-black text-white px-2 m-0.5;
+		@apply rounded-full px-1 m-0.5 text-dark-blue;
 	}
 }
 
@@ -36,6 +36,14 @@
 	background-color: white;
 }
 
-body {
+html,
+body,
+#root {
 	font-family: "Inter", sans-serif;
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	/* Prevents overflow on the x-axis */
+	overflow-x: hidden;
 }

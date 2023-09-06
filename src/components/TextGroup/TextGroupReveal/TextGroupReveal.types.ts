@@ -2,7 +2,7 @@
 //
 //
 
-export type TextGroupProps = {
+export type TextGroupRevealProps = {
 	data: TextGroupData[];
 };
 
