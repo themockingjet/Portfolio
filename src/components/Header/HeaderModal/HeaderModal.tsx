@@ -3,8 +3,9 @@
 //
 
 import { m } from "framer-motion";
+import { HeaderModalProps } from "./HeaderModal.types";
 
-export function HeaderModal() {
+export function HeaderModal(props: HeaderModalProps) {
     //
 
     return (
@@ -20,19 +21,40 @@ export function HeaderModal() {
                 transition={{ duration: 0.3, easings: "easeInOut" }}
             >
                 <div className="flex h-full w-full flex-col items-center justify-center space-y-10 text-xl font-semibold">
-                    <a className="" href="#about">
+                    <a
+                        className=""
+                        href="#about"
+                        onClick={() => {
+                            props.onClose();
+                        }}
+                    >
                         About.
                     </a>
-                    <a className="" href="#experience">
+                    <a
+                        className=""
+                        href="#experience"
+                        onClick={() => {
+                            props.onClose();
+                        }}
+                    >
                         Experience.
                     </a>
-                    <a className="" href="#projects">
+                    <a
+                        className=""
+                        href="#projects"
+                        onClick={() => {
+                            props.onClose();
+                        }}
+                    >
                         Projects.
                     </a>
 
                     <a
                         className=""
                         href="https://drive.google.com/file/d/1SYSOeT5bzQxhN-dMaf1M5MVIXUx4UXh9/view?usp=drive_link"
+                        onClick={() => {
+                            props.onClose();
+                        }}
                     >
                         Resume.
                     </a>

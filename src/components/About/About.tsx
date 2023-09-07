@@ -20,10 +20,10 @@ export function About() {
                     viewport={{ margin: "0% 0% 0% 0%" }}
                     transition={{ duration: 0.5, delay: 0.3 }}
                 >
-                    <h1 className="text-sunset py-6 text-4xl font-semibold tracking-tighter dark:text-pale-blue md:pb-8">
+                    <h1 className="py-6 text-4xl font-semibold tracking-tighter text-sunset dark:text-pale-blue md:pb-8">
                         About Me
                     </h1>
-                    <div className="dark:bg-orange h-1  flex-1 self-center bg-dark-blue">
+                    <div className="h-1 flex-1  self-center bg-dark-blue dark:bg-orange">
                         <svg width="5" height="5" viewBox="0 0 5 5" fill="none">
                             <path d="M0 0h5z" fill="none" />
                         </svg>
@@ -48,7 +48,7 @@ export function About() {
                     <div className="flex h-full w-full flex-wrap font-roboto-mono ">
                         <div className="shrink-0 basis-1/2 md:basis-1/4">
                             <MotionDivReveal
-                                className="dark:text-orange text-sunset font-semibold underline"
+                                className="font-semibold text-sunset underline dark:text-orange"
                                 transition={{ duration: 0.5, delay: 0 }}
                             >
                                 Languages
@@ -62,7 +62,7 @@ export function About() {
 
                         <div className="shrink-0 basis-1/2 md:basis-1/4">
                             <MotionDivReveal
-                                className="dark:text-orange text-sunset font-semibold underline"
+                                className="font-semibold text-sunset underline dark:text-orange"
                                 transition={{ duration: 0.5, delay: 0 }}
                             >
                                 Frameworks
@@ -77,7 +77,7 @@ export function About() {
 
                         <div className="shrink-0 basis-1/2 md:basis-1/4">
                             <MotionDivReveal
-                                className="dark:text-orange text-sunset font-semibold underline"
+                                className="font-semibold text-sunset underline dark:text-orange"
                                 transition={{ duration: 0.5, delay: 0 }}
                             >
                                 Databases
@@ -90,7 +90,7 @@ export function About() {
 
                         <div className="shrink-0 basis-1/2 md:basis-1/4">
                             <MotionDivReveal
-                                className="dark:text-orange text-sunset font-semibold underline"
+                                className="font-semibold text-sunset underline dark:text-orange"
                                 transition={{ duration: 0.5, delay: 0 }}
                             >
                                 Tools

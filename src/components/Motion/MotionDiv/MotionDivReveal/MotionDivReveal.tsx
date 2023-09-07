@@ -23,7 +23,7 @@ export function MotionDivReveal(props: MotionDivRevealProps) {
                 {props.children}
             </m.div>
             <m.div
-                viewport={{ margin: "-20% 0% -20% 0%" }}
+                viewport={{ margin: "-10% 0% -20% 0%" }}
                 variants={{
                     hidden: { left: 0 },
                     visible: { left: "100%" },

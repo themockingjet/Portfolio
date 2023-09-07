@@ -9,10 +9,10 @@
 
 @layer components {
     .code-language {
-        @apply m-0.5 rounded-full px-1 text-dark-blue;
+        @apply m-0.5 rounded-full px-1 text-dark-blue shadow-md dark:shadow-inherit;
     }
     .card {
-        @apply dark:bg-indigo bg-sky-blue rounded-md p-6 shadow-md dark:shadow-pale-blue/50;
+        @apply rounded-md bg-sky-blue p-6 shadow-md dark:bg-indigo dark:shadow-pale-blue/50;
     }
 }
 

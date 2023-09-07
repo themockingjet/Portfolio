@@ -4,8 +4,9 @@
 
 import { ButtonHamburger } from "@components/ButtonHamburger";
 import { cn } from "@utils";
+import { HeaderNavbarProps } from "./HeaderNavbar.types";
 
-export function HeaderNavbar(props: any) {
+export function HeaderNavbar(props: HeaderNavbarProps) {
     //
 
     return (

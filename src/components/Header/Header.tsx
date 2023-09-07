@@ -78,7 +78,7 @@ export function Header(props: HeaderProps) {
                             )
                         )}
                     </AnimatePresence>
-                    {isModalOpen && <HeaderModal />}
+                    {isModalOpen && <HeaderModal isOpen={isModalOpen} onClose={() => setIsModalOpen(!isModalOpen)} />}
                 </div>
             </div>
         </LazyMotion>
