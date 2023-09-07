@@ -2,7 +2,7 @@
 //
 //
 
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 
 export function HeaderModal() {
     //
@@ -10,9 +10,9 @@ export function HeaderModal() {
     return (
         // show button from header on top of modal
         <div
-            className={`absolute bottom-0 right-0 top-0 z-20 flex h-screen w-screen justify-end bg-dark-blue bg-opacity-30 backdrop-blur-sm`}
+            className={`fixed top-0 z-10 flex h-screen w-screen justify-end overflow-hidden bg-dark-blue bg-opacity-30 backdrop-blur-sm`}
         >
-            <motion.div
+            <m.div
                 className="flex h-screen w-3/4 justify-items-end bg-light-blue dark:bg-dark-blue md:w-1/2 lg:w-1/3"
                 initial={{ x: "100%" }}
                 animate={{ x: 0 }}
@@ -37,7 +37,7 @@ export function HeaderModal() {
                         Resume.
                     </a>
                 </div>
-            </motion.div>
+            </m.div>
         </div>
     );
 }

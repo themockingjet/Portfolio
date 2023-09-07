@@ -6,8 +6,10 @@ import { useState } from "react";
 import { Switch } from "@headlessui/react";
 
 import { useDarkMode } from "@hooks/useDarkMode";
+import { DarkmodeToggleProps } from "./DarkmodeToggle.types";
+import { cn } from "@utils";
 
-export function DarkmodeToggle() {
+export function DarkmodeToggle({ className }: DarkmodeToggleProps) {
     const [toggle, setToggle] = useState(false);
     const { theme, setTheme } = useDarkMode();
 
@@ -20,7 +22,7 @@ export function DarkmodeToggle() {
             }}
             className={`${
                 theme ? "bg-white/80" : "bg-dark-blue"
-            } relative inline-flex h-10 w-10 items-center justify-center rounded-full`}
+            } relative z-[5] inline-flex h-10 w-10 items-center justify-center rounded-full`}
         >
             <svg
                 className={`${

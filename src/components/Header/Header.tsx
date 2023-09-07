@@ -3,8 +3,7 @@
 //
 
 import { useEffect, useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
-import { cn } from "@utils";
+import { AnimatePresence, LazyMotion, domAnimation, m } from "framer-motion";
 
 import { DarkmodeToggle } from "@components/DarkmodeToggle";
 import { HeaderNavbar } from "./HeaderNavbar";
@@ -20,7 +19,11 @@ export function Header(props: HeaderProps) {
     // disable scrolling when modal is open using useffect
     useEffect(() => {
         const main_container = document.getElementById("main-container");
-
+        if (isModalOpen) {
+            main_container && main_container.classList.add("blur-sm");
+        } else {
+            main_container && main_container.classList.remove("blur-sm");
+        }
         main_container &&
             main_container.addEventListener("scroll", (e) => {
                 // prevent going back to top
@@ -37,45 +40,48 @@ export function Header(props: HeaderProps) {
     }, [isModalOpen]);
 
     return (
-        <AnimatePresence>
-            {yPosition !== undefined && yPosition < 100 ? (
-                <motion.div
-                    className={cn(
-                        "min-h-24 fixed inset-x-0 top-0 z-10 h-24 w-full bg-light-blue px-6 xl:container dark:bg-dark-blue md:px-12 lg:px-28 xl:mx-auto",
-                        props.className,
-                    )}
-                    initial={{ height: "0rem" }}
-                    animate={{ height: "6rem" }}
-                    exit={{ height: "0rem" }}
-                    transition={{ duration: 0.18, ease: "easeInOut", when: "beforeChildren", staggerChildren: 0.1 }}
-                >
-                    <div className="z-10 flex h-full w-full items-center justify-between md:px-12 lg:px-28 xl:mx-auto">
-                        <DarkmodeToggle />
-                        <HeaderNavbar onClick={() => setIsModalOpen(!isModalOpen)} />
-                        {isModalOpen && <HeaderModal />}
-                    </div>
-                </motion.div>
-            ) : (
-                isScrollTop && (
-                    <motion.div
-                        className={cn(
-                            "min-h-20 fixed top-0 z-20 h-20 w-full bg-light-blue px-6 drop-shadow-lg dark:bg-dark-blue",
-                            props.className,
+        <LazyMotion features={domAnimation}>
+            <div className="max-h-24 w-full ">
+                <div className="fixed inset-x-0 top-0 z-10 flex max-h-24 w-full bg-light-blue dark:bg-dark-blue">
+                    <AnimatePresence>
+                        {yPosition !== undefined && yPosition < 100 ? (
+                            <m.div
+                                className={`flex h-24 w-full items-center justify-between px-6 xl:container md:px-12 lg:px-28 xl:mx-auto ${
+                                    yPosition !== undefined && yPosition < 100 ? "" : isScrollTop ? "shadow-lg" : "hidden"
+                                }`}
+                                initial={{ height: "0rem" }}
+                                animate={{ height: "6rem" }}
+                                exit={{ height: "0rem" }}
+                                transition={{ duration: 0.2, ease: "easeInOut" }}
+                            >
+                                <DarkmodeToggle />
+                                <HeaderNavbar onClick={() => setIsModalOpen(!isModalOpen)} className="relative z-20" />
+                            </m.div>
+                        ) : (
+                            isScrollTop && (
+                                <m.div
+                                    className={`flex h-20 w-full items-center justify-between px-6 xl:container md:px-12 lg:px-28 xl:mx-auto ${
+                                        yPosition !== undefined && yPosition < 100
+                                            ? ""
+                                            : isScrollTop
+                                            ? "shadow-lg"
+                                            : "hidden"
+                                    }`}
+                                    initial={{ height: "0rem" }}
+                                    animate={{ height: "6rem" }}
+                                    exit={{ height: "0rem" }}
+                                    transition={{ duration: 0.2, ease: "easeInOut" }}
+                                >
+                                    <DarkmodeToggle />
+                                    <HeaderNavbar onClick={() => setIsModalOpen(!isModalOpen)} className="relative z-20" />
+                                </m.div>
+                            )
                         )}
-                        initial={{ height: "0rem" }}
-                        animate={{ height: "5rem" }}
-                        exit={{ height: "0rem" }}
-                        transition={{ duration: 0.18, ease: "easeInOut", when: "beforeChildren", staggerChildren: 0.1 }}
-                    >
-                        <div className=" flex h-full w-full items-center justify-between px-6 xl:container md:px-12 lg:px-28 xl:mx-auto">
-                            <DarkmodeToggle />
-                            <HeaderNavbar onClick={() => setIsModalOpen(!isModalOpen)} />
-                            {isModalOpen && <HeaderModal />}
-                        </div>
-                    </motion.div>
-                )
-            )}
-        </AnimatePresence>
+                    </AnimatePresence>
+                    {isModalOpen && <HeaderModal />}
+                </div>
+            </div>
+        </LazyMotion>
     );
 }
 
