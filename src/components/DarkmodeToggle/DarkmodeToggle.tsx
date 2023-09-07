@@ -6,10 +6,8 @@ import { useState } from "react";
 import { Switch } from "@headlessui/react";
 
 import { useDarkMode } from "@hooks/useDarkMode";
-import { DarkmodeToggleProps } from "./DarkmodeToggle.types";
-import { cn } from "@utils";
 
-export function DarkmodeToggle({ className }: DarkmodeToggleProps) {
+export function DarkmodeToggle() {
     const [toggle, setToggle] = useState(false);
     const { theme, setTheme } = useDarkMode();
 
