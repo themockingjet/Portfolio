@@ -11,10 +11,8 @@ export function About() {
 
     return (
         <LazyMotion features={domAnimation}>
-            <section
-                id="about"
-                className="flex h-auto flex-col overflow-hidden px-6 pb-6 xl:container md:px-12 md:pb-12 lg:px-28 xl:mx-auto"
-            >
+            <div id="about" className="collapse absolute -mt-32"></div>
+            <section className="flex h-auto flex-col overflow-hidden px-6 pb-6 xl:container md:px-12 md:pb-12 lg:px-28 xl:mx-auto">
                 <MotionDivReveal
                     className="flex w-full space-x-4"
                     viewport={{ margin: "0% 0% 0% 0%" }}
@@ -45,7 +43,7 @@ export function About() {
                         Here are the few technologies I've been working with recently:
                     </MotionDivReveal>
 
-                    <div className="flex h-full w-full flex-wrap font-roboto-mono ">
+                    <div className="flex h-full w-full flex-wrap font-roboto-mono">
                         <div className="shrink-0 basis-1/2 md:basis-1/4">
                             <MotionDivReveal
                                 className="font-semibold text-sunset underline dark:text-orange"

@@ -20,7 +20,7 @@ export function HeaderModal(props: HeaderModalProps) {
                 exit={{ x: "100%" }}
                 transition={{ duration: 0.3, easings: "easeInOut" }}
             >
-                <div className="flex h-full w-full flex-col items-center justify-center space-y-10 text-xl font-semibold">
+                <div className="flex h-full w-full flex-col items-center justify-center space-y-20 text-xl font-semibold">
                     <a
                         className=""
                         href="#about"

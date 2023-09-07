@@ -42,7 +42,11 @@ export function Header(props: HeaderProps) {
     return (
         <LazyMotion features={domAnimation}>
             <div className="max-h-24 w-full ">
-                <div className="fixed inset-x-0 top-0 z-10 flex max-h-24 w-full bg-light-blue dark:bg-dark-blue">
+                <div
+                    className={`fixed inset-x-0 top-0 z-10 flex max-h-24 w-full bg-light-blue dark:bg-dark-blue ${
+                        yPosition !== undefined && yPosition < 100 ? "" : isScrollTop ? "shadow-lg" : "hidden"
+                    }`}
+                >
                     <AnimatePresence>
                         {yPosition !== undefined && yPosition < 100 ? (
                             <m.div
@@ -61,14 +65,10 @@ export function Header(props: HeaderProps) {
                             isScrollTop && (
                                 <m.div
                                     className={`flex h-20 w-full items-center justify-between px-6 xl:container md:px-12 lg:px-28 xl:mx-auto ${
-                                        yPosition !== undefined && yPosition < 100
-                                            ? ""
-                                            : isScrollTop
-                                            ? "shadow-lg"
-                                            : "hidden"
+                                        yPosition !== undefined && yPosition < 100 ? "" : isScrollTop ? "" : "hidden"
                                     }`}
                                     initial={{ height: "0rem" }}
-                                    animate={{ height: "6rem" }}
+                                    animate={{ height: "5rem" }}
                                     exit={{ height: "0rem" }}
                                     transition={{ duration: 0.2, ease: "easeInOut" }}
                                 >

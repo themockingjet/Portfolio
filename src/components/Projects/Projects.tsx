@@ -14,10 +14,8 @@ import { Flamss } from "./Projects/Flamss";
 export function Projects() {
     return (
         <LazyMotion features={domAnimation}>
-            <section
-                id="projects"
-                className="flex h-auto flex-col overflow-hidden px-6 pb-6 xl:container md:px-12 lg:px-28 xl:mx-auto"
-            >
+            <div id="projects" className="collapse absolute -mt-32"></div>
+            <section className="flex h-auto flex-col overflow-hidden px-6 pb-6 xl:container md:px-12 lg:px-28 xl:mx-auto">
                 <MotionDivReveal
                     className="flex w-full space-x-4"
                     viewport={{ margin: "0% 0% 0% 0%" }}
