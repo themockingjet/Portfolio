@@ -46,7 +46,7 @@ export function HeaderNavbar(props: HeaderNavbarProps) {
 
                     <a
                         className="hover:text-indigo-500 dark:hover:text-indigo-400 my-1 text-sm font-medium dark:text-gray-200 md:mx-4 md:my-0 lg:text-base"
-                        href="#"
+                        href="https://drive.google.com/file/d/1fFbtLDSx2hOb_GNZvc_bXeqYx39EfeT3/view?usp=drive_link"
                     >
                         Resume
                     </a>
