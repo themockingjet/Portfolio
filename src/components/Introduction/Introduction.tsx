@@ -1,7 +1,7 @@
 //
 //
 //
-import { LazyMotion, domAnimation, m } from "framer-motion";
+import { LazyMotion, domAnimation } from "framer-motion";
 
 import { MotionDivReveal } from "@components/Motion/MotionDiv/MotionDivReveal";
 import { IconRoll } from "@components/IconRoll";
