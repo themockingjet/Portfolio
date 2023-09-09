@@ -5,8 +5,11 @@ import { LazyMotion, domAnimation } from "framer-motion";
 
 import { MotionDivReveal } from "@components/Motion/MotionDiv/MotionDivReveal";
 import { MotionULReveal } from "@components/Motion/MotionUL/MotionULReveal";
+import { useDarkMode } from "usehooks-ts";
 
 export function About() {
+    //
+    const { isDarkMode } = useDarkMode();
     //
 
     return (
@@ -32,7 +35,7 @@ export function About() {
                     <div className="flex-col space-y-6">
                         {/* image */}
                         <img
-                            src="/img/me_light.jpg"
+                            src={isDarkMode ? "/img/me_dark.jpg" : "/img/me_light.jpg"}
                             className="float-left mr-5 mt-8 h-44 w-32 rounded-full object-cover object-center md:float-right md:ml-5 md:mr-0 md:mt-6 md:h-72 md:w-48 md:rounded-md lg:float-left lg:mr-5 lg:h-full"
                         />
                         {/* content */}
