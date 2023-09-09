@@ -20,9 +20,6 @@ const App = () => {
     return (
         <Scrollbar
             className="h-screen min-h-screen overflow-hidden bg-light-blue text-dark-blue dark:bg-dark-blue dark:text-crystal "
-            renderThumbVertical={(props) => (
-                <div {...props} className="rounded-full bg-dark-blue text-dark-blue dark:bg-light-blue xl:w-24" />
-            )}
             onScrollFrame={(scrollPosition) => {
                 setYPosition((prev) => {
                     if (scrollPosition.scrollTop < prev) {

@@ -14,8 +14,10 @@ export function Scrollbar(props: ScrollbarProps) {
             onScrollStop={props.handleScrollStop}
             onUpdate={props.handleUpdate}
             renderView={(props) => <div {...props} style={{ ...props.style, overflowX: "hidden" }} />}
-            renderTrackVertical={props.renderTrackVertical}
-            renderThumbVertical={props.renderThumbVertical}
+            renderTrackVertical={(props) => <div {...props} className="right-0 z-50 h-full" />}
+            renderThumbVertical={(props) => (
+                <div {...props} className="z-50 rounded-full bg-dark-blue dark:bg-light-blue xl:w-24" />
+            )}
             autoHide={props.autoHide || true}
             autoHideTimeout={props.autoHideTimeout || 400}
             autoHideDuration={props.autoHideDuration || 350}
