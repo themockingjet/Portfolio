@@ -11,9 +11,9 @@ export function Introduction() {
 
     return (
         <LazyMotion features={domAnimation}>
-            <section className="h-screen max-h-screen overflow-hidden px-6 xl:container md:px-12 lg:px-28 xl:mx-auto">
-                <div className="flex h-full flex-col items-center justify-center space-y-10 ">
-                    <div className="flex flex-col rounded-xl bg-gradient-to-r from-cyan-300 to-blue-300 p-3 shadow-xl dark:from-blue-900 dark:to-cyan-900 dark:shadow-white/20 md:p-12 lg:p-20">
+            <section className="relative h-screen max-h-screen">
+                <div className="flex h-full items-center px-6 xl:container md:px-12 lg:px-28 xl:mx-auto">
+                    <MotionDivReveal className="flex-col rounded-xl bg-gradient-to-r from-cyan-300 to-blue-300 p-3 shadow-xl dark:from-blue-900 dark:to-cyan-900 dark:shadow-white/20 md:p-12 lg:p-20">
                         <MotionDivReveal
                             coverClassName="bg-transparent dark:bg-transparent"
                             viewport={{ margin: "-20% 0% -20% 0%" }}
@@ -78,7 +78,7 @@ export function Introduction() {
                                 </svg>
                             </a>
                         </IconRoll>
-                    </div>
+                    </MotionDivReveal>
                 </div>
             </section>
         </LazyMotion>

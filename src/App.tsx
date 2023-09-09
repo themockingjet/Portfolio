@@ -19,7 +19,7 @@ const App = () => {
 
     return (
         <Scrollbar
-            className="h-screen min-h-screen overflow-hidden bg-light-blue text-dark-blue dark:bg-dark-blue dark:text-crystal "
+            className="h-screen min-h-screen bg-light-blue text-dark-blue dark:bg-dark-blue dark:text-crystal "
             onScrollFrame={(scrollPosition) => {
                 setYPosition((prev) => {
                     if (scrollPosition.scrollTop < prev) {
@@ -32,7 +32,7 @@ const App = () => {
             }}
         >
             <Header yPosition={yPosition} isScrollTop={isScrollTop} />
-            <div id="main-container" className="h-full ">
+            <div id="main-container" className="h-full">
                 <Introduction />
                 <About />
                 <Experience />
