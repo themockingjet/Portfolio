@@ -9,44 +9,27 @@
 
 @layer components {
     .code-language {
-        @apply m-0.5 rounded-full px-1 text-dark-blue shadow-md dark:shadow-inherit;
+        @apply m-1 rounded-full px-2 text-dark-blue shadow-md dark:shadow-inherit;
     }
     .card {
-        @apply rounded-md bg-sky-blue p-6 shadow-md dark:bg-indigo dark:shadow-pale-blue/50;
+        @apply rounded-md bg-water p-6 shadow-md drop-shadow-xl dark:bg-indigo dark:shadow-pale-blue/50;
     }
-}
-
-/* width */
-::-webkit-scrollbar {
-    background-color: transparent;
-    width: 10px;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-    background: #474747;
-    border-radius: 5px;
-    height: 5px;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-    background: #474747;
-}
-
-.scroll-hide::-webkit-scrollbar-thumb {
-    position: absolute;
-    background-color: white;
+    .card-gradient {
+        @apply rounded-xl bg-gradient-to-r from-cyan-300 to-blue-300 p-3 dark:from-blue-900 dark:to-cyan-900;
+    }
+    .resume {
+        @apply rounded-md bg-gradient-to-r from-cyan-300 to-blue-300 px-4 py-1 transition-transform duration-300 hover:scale-110 hover:shadow-lg hover:drop-shadow-md dark:from-blue-900 dark:to-cyan-900;
+    }
 }
 
 html,
 body,
 #root {
+    scroll-behavior: smooth;
     font-family: "Inter", sans-serif;
     height: 100%;
     width: 100%;
     margin: 0;
     padding: 0;
-    /* Prevents overflow on the x-axis */
-    overflow-x: hidden;
+    overflow: hidden;
 }

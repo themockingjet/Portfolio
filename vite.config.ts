@@ -8,6 +8,8 @@ export default defineConfig({
 	plugins: [react()],
 	resolve: {
 		alias: {
+			"@components/v1": path.join(__dirname, "./src/components/v1/"),
+			"@components/v1/*": path.join(__dirname, "./src/components/v1/*"),
 			"@components": path.join(__dirname, "./src/components/"),
 			"@components/*": path.join(__dirname, "./src/components/*"),
 			"@hooks": path.join(__dirname, "./src/hooks/"),

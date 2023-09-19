@@ -21,6 +21,8 @@
 		"noFallthroughCasesInSwitch": true,
 		"baseUrl": ".", // Required for path aliases
 		"paths": {
+			"@components/v1": ["./src/components/v1"],
+			"@components/v1/*": ["./src/components/v1/*"],
 			"@components": ["./src/components"],
 			"@components/*": ["./src/components/*"],
 			"@hooks": ["./src/hooks"],
