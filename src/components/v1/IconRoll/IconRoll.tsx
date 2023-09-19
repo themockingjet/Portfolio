@@ -26,6 +26,7 @@ export function IconRoll(props: IconRollProps) {
                         variants={container}
                         initial="hidden"
                         animate="visible"
+                        whileHover={{ scale: 1.2, rotate: 360, transition: { duration: 0.2 } }}
                         transition={{
                             duration: 2,
                             delay: index * 0.35,

@@ -12,7 +12,7 @@ export function About() {
     //
 
     return (
-        <section id="about" className="relative h-full min-h-screen w-screen bg-[#baf6f1] lg:min-h-min">
+        <section id="about" className="relative h-full min-h-screen w-screen bg-[#baf6f1] dark:bg-dark-blue lg:min-h-min">
             <BackgroundTwo />
             <div className="flex h-full w-full flex-col justify-center px-6 py-12 xl:container md:px-12 md:py-20 lg:px-28 lg:py-28 xl:mx-auto">
                 <MotionSlideVertical className="flex w-full space-x-4">

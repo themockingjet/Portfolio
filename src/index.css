@@ -18,7 +18,7 @@
         @apply rounded-xl bg-gradient-to-r from-cyan-300 to-blue-300 p-3 dark:from-blue-900 dark:to-cyan-900;
     }
     .resume {
-        @apply rounded-md bg-gradient-to-r from-cyan-300 to-blue-300 px-4 py-1 transition-transform duration-300 hover:scale-110 hover:shadow-lg hover:drop-shadow-md dark:from-blue-900 dark:to-cyan-900;
+        @apply rounded-md bg-gradient-to-r from-cyan-300 to-blue-300 px-4 py-1 transition-transform duration-300 hover:scale-110 hover:shadow-md hover:drop-shadow-xl dark:from-blue-900 dark:to-cyan-900 dark:shadow-light-blue;
     }
 }
 
