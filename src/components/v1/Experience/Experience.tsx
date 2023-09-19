@@ -12,9 +12,9 @@ export function Experience() {
     //
 
     return (
-        <section id="experience" className="relative h-screen min-h-screen w-screen">
+        <section id="experience" className="relative h-auto min-h-screen w-screen lg:min-h-min">
             <BackgroundThree />
-            <div className="flex h-auto flex-col px-6 pb-6 pt-24 xl:container md:px-12 lg:px-28 xl:mx-auto">
+            <div className="flex h-full w-full flex-col justify-center px-6 py-12 xl:container md:px-12 md:py-20 lg:px-28 lg:py-28 xl:mx-auto">
                 <MotionSlideVertical className="flex w-full space-x-4">
                     <ContentDividerReverse>Experience</ContentDividerReverse>
                 </MotionSlideVertical>

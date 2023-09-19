@@ -10,16 +10,14 @@ const container = {
     visible: { scale: 1, rotate: 0, transition: { duration: 0.5 } },
 };
 
-export function MotionSpin({ children, ...props }: MotionSpinProps) {
+export function MotionSpin({ ...props }: MotionSpinProps) {
     return (
-        <m.div
+        <m.img
             viewport={{ margin: "-10% 0% -10% 0%" }}
             variants={container}
             initial="hidden"
             whileInView="visible"
             {...props}
-        >
-            {children}
-        </m.div>
+        />
     );
 }

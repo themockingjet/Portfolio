@@ -21,7 +21,7 @@ export function Indexv1() {
     return (
         <LazyMotion features={domAnimation}>
             <Scrollbar
-                className="h-screen min-h-screen bg-light-blue text-dark-blue dark:bg-dark-blue dark:text-crystal "
+                className="h-screen min-h-screen bg-light-blue text-dark-blue dark:bg-dark-blue dark:text-crystal"
                 onScrollFrame={(scrollPosition) => {
                     setYPosition((prev) => {
                         if (scrollPosition.scrollTop < prev) {

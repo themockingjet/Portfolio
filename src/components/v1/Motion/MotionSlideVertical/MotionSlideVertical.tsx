@@ -23,11 +23,9 @@ export function MotionSlideVertical(props: MotionSlideVerticalProps) {
     //
     if (props.stagger) {
         return (
-            <div className="overflow-hidden">
-                <m.div viewport={{ margin: "-10% 0% -10% 0%" }} className="overflow-hidden" variants={containerB}>
-                    {props.children}
-                </m.div>
-            </div>
+            <m.div viewport={{ margin: "-10% 0% -10% 0%" }} className="overflow-hidden" variants={containerB}>
+                {props.children}
+            </m.div>
         );
     }
 
